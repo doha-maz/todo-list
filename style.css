@@ -1,0 +1,96 @@
+:root{
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+/* tout le site (page en entière) */
+body{
+    background: #f5f5; /* couleur de fond */
+    margin:0; /* supprime les marges par défaut  */
+    padding: 20px; /* espace intérieur autour du contenu */
+}
+
+/* le container qui contient toute la to-do list */
+.container{
+    max-width: 600px; /* largeur max */
+    margin: 30px auto; /* 30px en haut/bas + auto => centré horizontalement */
+    background: whitesmoke;
+    padding: 20px; /* espace intérieur */
+    border-radius: 8px; /* coibs arrondis */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* ombre légère pour carte flottante */
+}
+
+/* les titres centrés */
+h1{
+    text-align: center;
+}
+
+/* zone où il y a l'input + bouton */
+.input-row{
+    display: flex; /* mets les éléments côte à côte (ligne) */
+    gap: 8px; /* espace de 8px entre eux */
+    margin-bottom: 16px; /* espace en bas avant la liste */
+} 
+
+/* champ texte où tu écris ta tâche */
+input#taskInput{
+    flex: 1; /* prend toute la place disponible à gauche */
+    padding: 10px; /* espace intérieur */
+    font-size: 16px; /* texte plus lisible */
+    border: 1px solid #ddd; /* fine bordure gris clair */
+    border-radius: 4px; /* coins légèrement arrondis */
+}
+
+/* bouton "Ajouter" */
+button#addBtn{
+    padding: 10px 14px; /* espace intérieur */
+    border: none; /* pas de bordure par défaut */
+    border-radius: 6px; /* coins arrondis */
+    cursor: pointer; /* curseur en main */
+    background: #007bf0; /* bleu */
+    color: white; /* texte en blanc */ 
+}
+
+/* liste des tâches */
+ul{
+    list-style: none; /* enlève les puces devant les tâches */
+    padding: 0; /* suppeime les marge par défaut */
+    margin: 0; /* supprime les bordures par défaut */
+}
+
+/* chaque tâche ajoutée */
+li.task{
+    padding: 10px; /* espace autour du texte */
+    border-bottom: 1px solid #eee; /* petite ligne grise sous chaque tâche */
+    display: flex; /* organise contenu en ligne */
+    justify-content: space-between; /* texte à gauche,action à droite */
+    align-items: center; /* tout est aligné verticalement */
+}
+
+/* tâche marquée comme terminée */
+li.task.done{
+    text-decoration: line-through; /* barre le texte */
+    color: #777; /* texte gris */
+    opacity: 0.8; /* légèrement transparent */
+}
+
+/* zone du texte de la tâche */
+.task .text{
+    flex: 1; /* prend toute la place disponible à gauche */
+}
+
+/* boutons(pprimer,terminer) */
+.task .actions{
+    margin-left: 12px; /* petit espace entre texte et boutons */
+    display: flex; /* les boutons sont alignés */
+    gap: 8px; /* les boutons sont espacés */
+}
+
+/* petit texte aide */
+.hint{
+    color: #666; /* gris foncé */
+    font-size: 12px; /* petit texte */
+    margin-top: 12px; /* espace au dessus */
+    text-align: center; /* centré */
+}
+
