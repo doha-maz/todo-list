@@ -23,6 +23,7 @@ body{
 /* les titres centrés */
 h1{
     text-align: center;
+    
 }
 
 /* zone où il y a l'input + bouton */
@@ -83,14 +84,20 @@ li.task.done{
 .task .actions{
     margin-left: 12px; /* petit espace entre texte et boutons */
     display: flex; /* les boutons sont alignés */
-    gap: 8px; /* les boutons sont espacés */
+    gap: 10px; /* les boutons sont espacés */
+    cursor: pointer;
 }
 
-/* petit texte aide */
-.hint{
-    color: #666; /* gris foncé */
-    font-size: 12px; /* petit texte */
-    margin-top: 12px; /* espace au dessus */
-    text-align: center; /* centré */
+/* boutons fait */
+.task .actions .btn_Fait{ 
+    background-color: #16ee16;
+    color: white;
 }
+
+/* boutons fait */
+.task .actions .btn_del{ 
+    background-color: #ee1616;
+    color: white;
+}
+
 
